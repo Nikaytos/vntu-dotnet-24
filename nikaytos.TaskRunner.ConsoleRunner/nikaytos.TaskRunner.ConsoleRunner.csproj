@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\nikaytos.TaskPlanner.DataAccess.Abstractions\nikaytos.TaskPlanner.DataAccess.Abstractions.csproj" />
+    <ProjectReference Include="..\nikaytos.TaskPlanner.DataAccess\nikaytos.TaskPlanner.DataAccess.csproj" />
     <ProjectReference Include="..\nikaytos.TaskRunner.Domain.Logic\nikaytos.TaskRunner.Domain.Logic.csproj" />
     <ProjectReference Include="..\nikaytos.TaskRunner.Domain.Models\nikaytos.TaskRunner.Domain.Models.csproj" />
   </ItemGroup>
