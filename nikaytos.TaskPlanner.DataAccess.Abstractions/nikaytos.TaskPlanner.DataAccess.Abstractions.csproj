@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\nikaytos.TaskPlanner.DataAccess.Abstractions\nikaytos.TaskPlanner.DataAccess.Abstractions.csproj" />
     <ProjectReference Include="..\nikaytos.TaskRunner.Domain.Models\nikaytos.TaskRunner.Domain.Models.csproj" />
   </ItemGroup>
 

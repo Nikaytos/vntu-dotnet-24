@@ -3,11 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nikaytos.TaskRunner.ConsoleRunner", "nikaytos.TaskRunner.ConsoleRunner\nikaytos.TaskRunner.ConsoleRunner.csproj", "{1AE5AF0D-AC10-4AE2-87C9-27FD1BD0CCA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nikaytos.TaskRunner.ConsoleRunner", "nikaytos.TaskRunner.ConsoleRunner\nikaytos.TaskRunner.ConsoleRunner.csproj", "{1AE5AF0D-AC10-4AE2-87C9-27FD1BD0CCA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nikaytos.TaskRunner.Domain.Models", "nikaytos.TaskRunner.Domain.Models\nikaytos.TaskRunner.Domain.Models.csproj", "{577778A2-E3B7-4048-9880-67EC01C51A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nikaytos.TaskRunner.Domain.Models", "nikaytos.TaskRunner.Domain.Models\nikaytos.TaskRunner.Domain.Models.csproj", "{577778A2-E3B7-4048-9880-67EC01C51A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nikaytos.TaskRunner.Domain.Logic", "nikaytos.TaskRunner.Domain.Logic\nikaytos.TaskRunner.Domain.Logic.csproj", "{B534A430-BB24-42F6-B9C3-77C20A67F1C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nikaytos.TaskRunner.Domain.Logic", "nikaytos.TaskRunner.Domain.Logic\nikaytos.TaskRunner.Domain.Logic.csproj", "{B534A430-BB24-42F6-B9C3-77C20A67F1C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nikaytos.TaskPlanner.DataAccess.Abstractions", "nikaytos.TaskPlanner.DataAccess.Abstractions\nikaytos.TaskPlanner.DataAccess.Abstractions.csproj", "{78E0C65B-F5BA-4830-8060-7AC9B8F34C6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nikaytos.TaskPlanner.DataAccess", "nikaytos.TaskPlanner.DataAccess\nikaytos.TaskPlanner.DataAccess.csproj", "{05DE950F-C1D9-4C88-9491-938606154EFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{77FEEA2E-BAB0-479F-86B1-6439BC57D70B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{485CB832-483B-428C-9A9B-A0189F1684BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{43A233A9-3F9F-486C-A16E-A48935522E71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{837FD2A5-818A-4378-8D6D-85C3CA7EAE10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nikaytos.TaskPlanner.Domain.Logic.Tests", "nikaytos.TaskPlanner.Domain.Logic.Tests\nikaytos.TaskPlanner.Domain.Logic.Tests.csproj", "{B02223B0-B390-4C1B-84C7-DC3600769213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +41,29 @@ Global
 		{B534A430-BB24-42F6-B9C3-77C20A67F1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B534A430-BB24-42F6-B9C3-77C20A67F1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B534A430-BB24-42F6-B9C3-77C20A67F1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E0C65B-F5BA-4830-8060-7AC9B8F34C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E0C65B-F5BA-4830-8060-7AC9B8F34C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E0C65B-F5BA-4830-8060-7AC9B8F34C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E0C65B-F5BA-4830-8060-7AC9B8F34C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05DE950F-C1D9-4C88-9491-938606154EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05DE950F-C1D9-4C88-9491-938606154EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05DE950F-C1D9-4C88-9491-938606154EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05DE950F-C1D9-4C88-9491-938606154EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02223B0-B390-4C1B-84C7-DC3600769213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02223B0-B390-4C1B-84C7-DC3600769213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02223B0-B390-4C1B-84C7-DC3600769213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02223B0-B390-4C1B-84C7-DC3600769213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1AE5AF0D-AC10-4AE2-87C9-27FD1BD0CCA0} = {43A233A9-3F9F-486C-A16E-A48935522E71}
+		{577778A2-E3B7-4048-9880-67EC01C51A5F} = {77FEEA2E-BAB0-479F-86B1-6439BC57D70B}
+		{B534A430-BB24-42F6-B9C3-77C20A67F1C2} = {77FEEA2E-BAB0-479F-86B1-6439BC57D70B}
+		{78E0C65B-F5BA-4830-8060-7AC9B8F34C6F} = {485CB832-483B-428C-9A9B-A0189F1684BB}
+		{05DE950F-C1D9-4C88-9491-938606154EFE} = {485CB832-483B-428C-9A9B-A0189F1684BB}
+		{B02223B0-B390-4C1B-84C7-DC3600769213} = {837FD2A5-818A-4378-8D6D-85C3CA7EAE10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F78D9224-8226-4F64-A9E2-193FC4BA09F3}

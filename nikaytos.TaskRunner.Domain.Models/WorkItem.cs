@@ -4,6 +4,7 @@ namespace nikaytos.TaskRunner.Domain.Models
 {
     public class WorkItem
     {
+        public Guid Id { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime DueDate { get; set; }
         public Priority Priority { get; set; }
@@ -14,7 +15,22 @@ namespace nikaytos.TaskRunner.Domain.Models
 
         public override string ToString()
         {
-            return $"{Title}: due {DueDate.ToString("dd.MM.yyyy")}, {Priority.ToString().ToLower()} priority";
+            return $"({Id}) {Title}: due {DueDate.ToString("dd.MM.yyyy")}, {Priority.ToString().ToLower()} priority";
+        }
+
+        public WorkItem Clone()
+        {
+            return new WorkItem
+            {
+                Id = Guid.NewGuid(),
+                CreationDate = this.CreationDate,
+                DueDate = this.DueDate,
+                Priority = this.Priority,
+                Complexity = this.Complexity,
+                Title = this.Title,
+                Description = this.Description,
+                IsCompleted = this.IsCompleted
+            };
         }
     }
 }
